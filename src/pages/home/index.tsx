@@ -4,6 +4,8 @@ import { API_URL } from '../../constant';
 import Question from '../../components/Question';
 import { useOutletContext } from 'react-router';
 
+axios.defaults.withCredentials = true;
+
 export const Home = () => {
   const [answer, setAnswer] = useState('');
   const [result, setResult] = useState<string | null>(null);
